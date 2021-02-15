@@ -1,6 +1,6 @@
 arch:
-    - amd64
-    - ppc64le
+  - amd64
+  - ppc64le
 language: generic
 # sudo shouldn't be required, but currently tests fail when run in a container
 # on travis instead of a vm. See https://github.com/dask/distributed/pull/1563.
@@ -9,17 +9,17 @@ dist: trusty
 
 env:
   matrix:
-    - PYTHON=3.6 TESTS=true COVERAGE=true PACKAGES="lz4" TORNADO=5 CRICK=true
+  - PYTHON=3.6 TESTS=true COVERAGE=true PACKAGES="lz4" TORNADO=5 CRICK=true
       arch: amd64
-    - PYTHON=3.7 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
+  - PYTHON=3.7 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
       arch: amd64
-    - PYTHON=3.8 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
+  - PYTHON=3.8 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
       arch: amd64
-     - PYTHON=3.6 TESTS=true COVERAGE=true PACKAGES="lz4" TORNADO=5 CRICK=true
+  - PYTHON=3.6 TESTS=true COVERAGE=true PACKAGES="lz4" TORNADO=5 CRICK=true
       arch: ppc64le
-    - PYTHON=3.7 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
+  - PYTHON=3.7 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
       arch: ppc64le
-    - PYTHON=3.8 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
+  - PYTHON=3.8 TESTS=true PACKAGES="python-snappy python-blosc" TORNADO=6
       arch: ppc64le
 
 matrix:
